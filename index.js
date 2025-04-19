@@ -4,4 +4,11 @@ function getComputerChoice (randomNumber) {
     if (randomNumber === 2) return "paper";
     if (randomNumber === 3) return "scissors";
 }
-console.log(getComputerChoice(randomNumber));
+function getHumanChoice () {
+const input = document.getElementById("input");
+const submit = document.getElementById("submit");
+submit.addEventListener("click", () => {
+    const value = input.value;
+    console.log(value);
+});
+}
