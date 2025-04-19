@@ -37,6 +37,13 @@ body{
     margin-top: 4rem;
     
 }
+@media (max-width: 768px){
+    .game {
+        flex-direction:column;
+        align-items: stretch;
+    }
+}
+
 .weapon{
     background-color:blueviolet;
     text-align: center;
