@@ -1,0 +1,60 @@
+/* body -> .wrapper -> .head */
+/*         .wrapper -> .game -> .player, .computer */
+.wrapper{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.head{
+    border: 2px solid;
+    min-width: 80vw;
+    
+}
+.head > * {
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.human-computer{
+    
+    display: flex;
+    justify-content: space-between;
+   }
+.game{
+    display: flex;
+    justify-content: space-between;
+    min-width: 60vw;
+    margin-top: 4rem;
+    
+}
+.player, .computer{
+    background-color:red;
+    text-align: center;
+    margin-block: 1rem;
+}
+.human-computer button{
+    width: 3rem;
+    height: 1.5rem;
+    background-color: none;
+    border: none;
+}
+.round-winner{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.round-winner button{
+    width: 7rem;
+    height: 1.5rem;
+    background-color: none;
+    border: none;
+    
+}
