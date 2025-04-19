@@ -5,10 +5,11 @@ let computerTrack = document.getElementById("computer-score");
 const input = document.getElementById("input");
 const inputComputer = document.getElementById("input-computer");
 const submit = document.getElementById("submit");
-
+const weapon = document.getElementById("weapon");
 
 
 submit.addEventListener("click", () => {
+    weapon.style.backgroundColor = "blueviolet";
 const randomNumber = Math.floor(Math.random() * 3) + 1;
 function getComputerChoice (randomNumber) {
     if (randomNumber === 1) return "rock";
@@ -48,7 +49,8 @@ function humanScore() {
         input.value = "Tie, try again"        
     }
     else{
-       input.value = 'Only use "rock", "paper" or "scissors"'; 
+       input.value = 'Only use "rock", "paper" or "scissors"';
+       weapon.style.backgroundColor = "red"
     }
     gameWinner();
 }
