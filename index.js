@@ -17,7 +17,7 @@ function getComputerChoice (randomNumber) {
     if (randomNumber === 3) return "scissors";
 }
 const computerChoice= getComputerChoice(randomNumber);
-inputComputer.value = computerChoice;
+    inputComputer.value = computerChoice;
 // human choice↓
     const getHumanChoice = input.value.toLowerCase();
 
@@ -87,3 +87,24 @@ console.log(humanScore());
 // }
 
 // console.log(reset());
+
+const wrapperDiv = document.querySelector(".wrapper");
+const btnRock = document.createElement("button");
+btnRock.textContent = "Rock";
+btnRock.style.marginRight = "auto";
+btnRock.style.width = "5rem";
+const btnPaper = document.createElement("button");
+btnPaper.textContent = "paper";
+btnPaper.style.marginRight = "auto";
+btnPaper.style.width = "5rem";
+const btnScissors = document.createElement("button");
+btnScissors.textContent = "Scissors";
+btnScissors.style.marginRight = "auto";
+btnScissors.style.width = "5rem";
+wrapperDiv.append(btnRock, btnPaper, btnScissors);
+
+function btnChoice(){
+    btnRock.value = "rock"
+    btnPaper.value = "paper"
+    btnScissors.value = "scissors"
+}
