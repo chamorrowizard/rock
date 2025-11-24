@@ -88,6 +88,8 @@ console.log(humanScore());
 
 // console.log(reset());
 
+
+//Created buttons thrpugh the DOM
 const wrapperDiv = document.querySelector(".wrapper");
 const btnRock = document.createElement("button");
 btnRock.textContent = "Rock";
@@ -102,9 +104,16 @@ btnScissors.textContent = "Scissors";
 btnScissors.style.marginRight = "auto";
 btnScissors.style.width = "5rem";
 wrapperDiv.append(btnRock, btnPaper, btnScissors);
+// Attributes set to #btn ↓
+btnRock.setAttribute('class', 'rps-btn');
+btnPaper.setAttribute('class', 'rps-btn');
+btnScissors.setAttribute('class', 'rps-btn');
 
-function btnChoice(){
-    btnRock.value = "rock"
-    btnPaper.value = "paper"
-    btnScissors.value = "scissors"
-}
+const buttons = document.querySelectorAll('.rps-btn');
+buttons.forEach(button => {
+  button.addEventListener('click', (event) => {
+      const buttonValue = event.target.textContent;
+      console.log(buttonValue)
+  });
+});
+
